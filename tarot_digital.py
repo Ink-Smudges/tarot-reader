@@ -160,7 +160,7 @@ def mind_body_spirit_spread():
 # -----------------------------
 # STREAMLIT APP
 # -----------------------------
-st.title("✨ Welcome to the Tarot Reader ✨")
+st.title("✨Welcome to the Tarot Reader✨")
 st.markdown("✩₊˚.⋆☾⋆⁺₊✧ Let us see what the cards have in store for you ✩₊˚.⋆☾⋆⁺₊✧")
 st.markdown(f"**Reading Time:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
