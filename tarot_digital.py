@@ -146,7 +146,7 @@ def display_card(card):
 
 def show_extra_tip():
     tip = random.choice(EXTRA_TIPS)
-    st.markdown(f"💫 **Extra Guidance:** 💫 {tip}")
+    st.markdown(f"💫 **Extra Guidance** 💫 {tip}")
 
 # -----------------------------
 # SPREADS
