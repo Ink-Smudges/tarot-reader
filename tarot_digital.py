@@ -191,13 +191,13 @@ def mind_body_spirit_spread():
         card = draw_card()
         display_card(card)
         def draw_card():
-    card = random.choice(TAROT_CARDS)
-    is_reversed = random.choice([True, False])
-    return {
+        card = random.choice(TAROT_CARDS)
+        is_reversed = random.choice([True, False])
+        return {
         "name": card["name"],
         "orientation": "Reversed" if is_reversed else "Upright",
         "meaning": card["reversed"] if is_reversed else card["upright"]
-    }
+        }
 
 # Update your print_card function:
 def print_card(card):
