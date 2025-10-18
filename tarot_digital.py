@@ -10,6 +10,38 @@ Original file is located at
 import random
 import streamlit as st
 from datetime import datetime
+EXTRA_TIPS = [
+    "Take a moment to meditate on this.",
+    "Consider journaling your thoughts today.",
+    "How does this show up in your daily life?",
+    "Is there something you need to release?",
+    "Reflect on how this energy affects your decisions.",
+    "What lessons can you take from this?",
+]
+
+def extended_meaning(card):
+    # Determine card type/category
+    if card["name"] in [
+        "The Fool", "The Magician", "The High Priestess", "The Empress",
+        "The High Emperor", "The Hierophant", "The Lovers", "The Chariot",
+        "Strength", "The Hermit", "The Wheel of Fortune", "Justice",
+        "The Hanged Man", "Death", "Temperance", "The Devil", "The Tower",
+        "The Star", "The Moon", "The Sun", "Judgement", "The World"
+    ]:
+        category_tip = "This card marks a significant life lesson or event."
+    elif "Cups" in card["name"]:
+        category_tip = "Focus on emotions and relationships."
+    elif "Wands" in card["name"]:
+        category_tip = "Look at your inspiration, energy, and actions."
+    elif "Swords" in card["name"]:
+        category_tip = "Pay attention to your thoughts, decisions, and challenges."
+    elif "Pentacles" in card["name"]:
+        category_tip = "Consider material, work, or practical matters."
+    else:
+        category_tip = "Reflect on this card’s message."
+
+    random_tip = random.choice(EXTRA_TIPS)
+    return f"{card['meaning']}. {category_tip} Advice: {random_tip}"
 # -----------------------------
 # FULL TAROT DECK
 # -----------------------------
@@ -109,6 +141,10 @@ def draw_card():
 def display_card(card):
     st.markdown(f"**{card['name']} ({card['orientation']})**")
     st.markdown(f"*Meaning:* {card['meaning']}")
+
+def show_extra_tip():
+    tip = random.choice(EXTRA_TIPS)
+    st.markdown(f"💡 **Extra Guidance:** {tip}")
 
 # -----------------------------
 # SPREADS
