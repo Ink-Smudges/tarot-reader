@@ -10,41 +10,6 @@ Original file is located at
 import random
 import streamlit as st
 from datetime import datetime
-# ---------------------------
-# Extra guidance snippet
-# ---------------------------
-EXTRA_TIPS = [
-    "Take a moment to meditate on this.",
-    "Consider journaling your thoughts today.",
-    "How does this show up in your daily life?",
-    "Is there something you need to release?",
-    "Reflect on how this energy affects your decisions.",
-    "What lessons can you take from this?",
-]
-
-def extended_meaning(card):
-    # Determine card type/category
-    if card["name"] in [
-        "The Fool", "The Magician", "The High Priestess", "The Empress",
-        "The High Emperor", "The Hierophant", "The Lovers", "The Chariot",
-        "Strength", "The Hermit", "The Wheel of Fortune", "Justice",
-        "The Hanged Man", "Death", "Temperance", "The Devil", "The Tower",
-        "The Star", "The Moon", "The Sun", "Judgement", "The World"
-    ]:
-        category_tip = "This card marks a significant life lesson or event."
-    elif "Cups" in card["name"]:
-        category_tip = "Focus on emotions and relationships."
-    elif "Wands" in card["name"]:
-        category_tip = "Look at your inspiration, energy, and actions."
-    elif "Swords" in card["name"]:
-        category_tip = "Pay attention to your thoughts, decisions, and challenges."
-    elif "Pentacles" in card["name"]:
-        category_tip = "Consider material, work, or practical matters."
-    else:
-        category_tip = "Reflect on this card’s message."
-
-    random_tip = random.choice(EXTRA_TIPS)
-    return f"{card['meaning']}. {category_tip} Advice: {random_tip}"
 # -----------------------------
 # FULL TAROT DECK
 # -----------------------------
@@ -190,15 +155,6 @@ def mind_body_spirit_spread():
         st.markdown(f"**{label}:**")
         card = draw_card()
         display_card(card)
-        def draw_card():
-        card = random.choice(TAROT_CARDS)
-        is_reversed = random.choice([True, False])
-        return {
-        "name": card["name"],
-        "orientation": "Reversed" if is_reversed else "Upright",
-        "meaning": card["reversed"] if is_reversed else card["upright"]
-        }
-
 # Update your print_card function:
 def print_card(card):
     print(f"Card: {card['name']} ({card['orientation']})")
