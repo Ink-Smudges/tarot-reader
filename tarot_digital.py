@@ -11,10 +11,10 @@ import random
 import streamlit as st
 from datetime import datetime
 EXTRA_TIPS = [
-    "Take a moment to meditate on this.",
+    "Take a moment to reflect on this.",
     "Consider journaling your thoughts today.",
     "How does this show up in your daily life?",
-    "Is there something you need to release?",
+    "Is there something you need to let go of?",
     "Reflect on how this energy affects your decisions.",
     "What lessons can you take from this?",
 ]
