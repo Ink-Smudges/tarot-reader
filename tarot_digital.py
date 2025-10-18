@@ -12,8 +12,10 @@ import streamlit as st
 from datetime import datetime
 EXTRA_TIPS = [
     "Take a moment to reflect on this.",
-    "Consider journaling your thoughts today.",
+    "Consider journaling your thoughts about this spread.",
     "How does this show up in your daily life?",
+    "What lessons do you take away from this spread?",
+    "What intention can you set based off this reading?",
     "Is there something you need to let go of?",
     "Reflect on how this energy affects your decisions.",
     "What lessons can you take from this?",
@@ -144,7 +146,7 @@ def display_card(card):
 
 def show_extra_tip():
     tip = random.choice(EXTRA_TIPS)
-    st.markdown(f"💡 **Extra Guidance:** {tip}")
+    st.markdown(f"💫 **Extra Guidance:** 💫 {tip}")
 
 # -----------------------------
 # SPREADS
