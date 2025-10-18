@@ -215,3 +215,4 @@ choice = st.selectbox("Choose a spread:", list(spreads.keys()))
 
 if st.button("Draw Cards"):
     spreads[choice]()
+    show_extra_tip()
