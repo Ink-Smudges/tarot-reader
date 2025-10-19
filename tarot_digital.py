@@ -143,6 +143,9 @@ def draw_card():
 def display_card(card):
     st.markdown(f"**{card['name']} ({card['orientation']})**")
     st.markdown(f"*Meaning:* {card['meaning']}")
+    st.markdown("<br><br>",
+    unsafe_allow_html=True)
+    st.divider()
 
 def show_extra_tip():
     tip = random.choice(EXTRA_TIPS)
