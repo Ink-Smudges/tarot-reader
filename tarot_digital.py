@@ -199,9 +199,13 @@ def mind_body_spirit_spread():
 
 def low_energy_spread():
     st.subheader("🔮 Low Energy Spread")
-    categories = ["Why do I feel so tired?", "What is draining my energy?", "What can I do to make my energy flow again?"]
+    categories = [
+        "Why do I feel so tired?",
+        "What is draining my energy?",
+        "What can I do to make my energy flow again?"
+    ]
     for label in categories:
-        st.markdown(f**{label}:**")
+        st.markdown(f"**{label}:**")
         card = draw_card()
         display_card(card)
 
