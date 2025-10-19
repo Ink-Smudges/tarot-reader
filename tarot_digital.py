@@ -196,6 +196,15 @@ def mind_body_spirit_spread():
         st.markdown(f"**{label}:**")
         card = draw_card()
         display_card(card)
+
+def low_energy_spread():
+    st.subheader("🔮 Low Energy Spread")
+    categories = [Why do I feel so tired?", "What is draining my energy?", "What can I do to make my energy flow again?"]
+    for label in categories:
+        st.markdown(f**{label}:**")
+        card = draw_card()
+        display_card(card)
+
 # Update your print_card function:
 def print_card(card):
     print(f"Card: {card['name']} ({card['orientation']})")
@@ -213,7 +222,8 @@ spreads = {
     "Past, Present, Future": past_present_future_spread,
     "Mind, Body, Spirit": mind_body_spirit_spread,
     "Strength and Weakness": strength_weakness_spread,
-    "Midwestern Gothic": midwestern_gothic_spread
+    "Midwestern Gothic": midwestern_gothic_spread,
+    "Low Energy": low_energy_spread
 }
 
 choice = st.selectbox("Choose a spread:", list(spreads.keys()))
