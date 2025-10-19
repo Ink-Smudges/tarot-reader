@@ -143,7 +143,7 @@ def draw_card():
 def display_card(card):
     st.markdown(f"**{card['name']} ({card['orientation']})**")
     st.markdown(f"*Meaning:* {card['meaning']}")
-    st.markdown("<br><br>",
+    st.markdown("<br>",
     unsafe_allow_html=True)
     st.divider()
 
